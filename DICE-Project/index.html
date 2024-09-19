@@ -48,12 +48,12 @@
       getrandomnumberforAI();
       showPlayerrollResult();
       showAIrollresult();
-      visaresultat();
+      visaresultat(); // Uppdatera resultatet i DOM
     });
 
     function getrandomnumberforplayer() {
       playerroll = Math.floor(Math.random() * 6) + 1;
-      console.log("Spelare rullar: " + playerroll);
+      console.log(playerroll);
     }
 
     function showPlayerrollResult() {
@@ -62,7 +62,7 @@
 
     function getrandomnumberforAI() {
       AIroll = Math.floor(Math.random() * 6) + 1;
-      console.log("AI rullar: " + AIroll);
+      console.log(AIroll);
     }
 
     function showAIrollresult() {
@@ -72,15 +72,17 @@
     function räknavinnare() {
       if (playerroll > AIroll) {
         return "Spelare Vinner!";
-      } else if (AIroll > playerroll) {
+      }
+      else if (AIroll > playerroll) {
         return "AI Vinner!";
-      } else {
+      }
+      else {
         return "Det är lika!";
       }
     }
 
     function visaresultat() {
-      resultatet.innerHTML = räknavinnare();
+      resultatet.innerHTML = räknavinnare(); // Returnera vinnaren som en sträng
     }
   </script>
 

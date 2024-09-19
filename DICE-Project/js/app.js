@@ -23,8 +23,7 @@ knapp.addEventListener('click', function() {
   getrandomnumberforAI();
   showPlayerrollResult();
   showAIrollresult();
-  visaresultat();
-  räknavinnare()
+  visaresultat(); // Uppdatera resultatet i DOM
 });
 
 function getrandomnumberforplayer() {
@@ -47,13 +46,16 @@ function showAIrollresult() {
 
 function räknavinnare() {
   if (playerroll > AIroll) {
-    console.log("Spelare Vinner!");
-  } else if (AIroll > playerroll) {
-    console.log("AI Vinner!");
-  } else {
-    console.log("Det är lika!");
+    return "Spelare Vinner!";
+  }
+  else if (AIroll > playerroll) {
+    return "AI Vinner!";
+  }
+  else {
+    return "Det är lika!";
   }
 }
+
 function visaresultat() {
-  resultatet.innerHTML = räknavinnare();
+  resultatet.innerHTML = räknavinnare(); // Returnera vinnaren som en sträng
 }
