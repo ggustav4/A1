@@ -25,7 +25,63 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <p>mitt spel.</p>
+  <button id = button0 >button</button>
+  <h1>Mitt Tärningsspel</h1>
+  <div>
+    <p>Spelarens rullning: <span id="playerrolltext">0</span></p>
+    <p>AI:s rullning: <span id="AIrrolltext">0</span></p>
+    <p> stats för ai</p> <span id= statsplayer >0</span>
+    <p> stats för player</p> <span id= statsAI >0</span>
+  </div>
+
+  <script>
+
+    let knapp = document.getElementById('button0');
+    let playerrolltext = document.getElementById('playerrolltext');
+    let AIrrolltext = document.getElementById('AIrrolltext');
+
+    let playerroll;
+    let AIroll;
+
+    knapp.addEventListener('click', function() {
+      getrandomnumberforplayer();
+      getrandomnumberforAI();
+      showPlayerrollResult();
+      showAIrollresult();
+      räknavinnare();
+    });
+
+    function getrandomnumberforplayer() {
+      playerroll = Math.floor(Math.random() * 6) + 1;
+      console.log(playerroll);
+    }
+
+    function showPlayerrollResult() {
+      playerrolltext.innerHTML = playerroll;
+    }
+
+    function getrandomnumberforAI() {
+      AIroll = Math.floor(Math.random() * 6) + 1;
+      console.log(AIroll);
+    }
+
+    function showAIrollresult() {
+      AIrrolltext.innerHTML = AIroll;
+    }
+
+    function räknavinnare() {
+      if (playerroll > AIroll) {
+        console.log("Spelare Vinner!");
+      } else if (AIroll > playerroll) {
+        console.log("AI Vinner!");
+      } else {
+        console.log("Det är lika!");
+      }
+    }
+  </script>
+
+
   <script src="js/app.js"></script>
 
 </body>

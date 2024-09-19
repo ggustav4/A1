@@ -11,32 +11,65 @@
 // ADD AND SHOW TOTAL SCORE, SO A AI SCORE, INCRESSE AI SCORE WHEN AI WINS, INCRESSE PLAYER SCORE WHEN PLAYER WINS
 
 
-let knapp  = document.getElementById('button0');
+let knapp = document.getElementById('button0');
 
 let playerrolltext = document.getElementById('playerrolltext');
 let AIrrolltext = document.getElementById('AIrrolltext');
 
-let playerroll= 0;
-let AIroll = 0;
+let
+
+let playerroll;
+let AIroll;
+
 
 knapp.addEventListener('click', function(){
   getrandomnumberforplayer();
-  showplayerrollresult()
-})
+  getrandomnumberforAI();
+  showPlayerrollResult();
+  showAIrollresult();
+});
+
 
 function getrandomnumberforplayer(){
   playerroll = Math.floor(Math.random() * 6) + 1;
+  console.log(playerroll);
 }
+function statsai () {
+  showAIrollresult() + 1;
+}
+function statsplayer () {
+  showPlayerrollResult() + 1;
 
-function showplayerrollresult(){
+function showPlayerrollResult(){
   playerrolltext.innerHTML = playerroll;
 }
 
+
 function getrandomnumberforAI(){
-  AIrroll = Math.floor(Math.random() * 6) + 1;
+  AIroll = Math.floor(Math.random() * 6) + 1;
+  console.log(AIroll);
 }
+
+
 function showAIrollresult(){
-  AIrrolltext.innerHTML = AIrroll;
+  AIrrolltext.innerHTML = AIroll;
 }
-showAIrollresult();
-getrandomnumberforAI();
+ function räknavinnare() {
+  if (playerroll > AIroll) {
+    console.log("Spelare Vinner!");
+
+  } else if (AIroll > playerroll) {
+    console.log("AI Vinner!");
+
+  } else {
+    console.log("Det är lika!");
+  }
+}
+ knapp.addEventListener('click', function(){
+  getrandomnumberforplayer();
+  getrandomnumberforAI();
+  showPlayerrollResult();
+  showAIrollresult();
+  räknavinnare();
+});
+
