@@ -23,7 +23,7 @@ knapp.addEventListener('click', function() {
   getrandomnumberforAI();
   showPlayerrollResult();
   showAIrollresult();
-  visaresultat(); // Uppdatera resultatet i DOM
+  visaresultat();
 });
 
 function getrandomnumberforplayer() {
@@ -57,5 +57,5 @@ function räknavinnare() {
 }
 
 function visaresultat() {
-  resultatet.innerHTML = räknavinnare(); // Returnera vinnaren som en sträng
+  resultatet.innerHTML = räknavinnare(); 
 }
