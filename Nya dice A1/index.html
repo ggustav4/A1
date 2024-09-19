@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+<h1>DICEROLL</h1>
+<button id="button0">Rulla tärningen</button>
+<div>
+  <p>Spelarens rullning: <span id="playerrolltext">0</span></p>
+  <p>AI rullning: <span id="AIrrolltext">0</span></p>
+</div>
+<p>Resultat <span id="result">Väntar på resultat av matchen</span></p>
+
+</body>
+<script>
+  let knapp = document.getElementById('button0');
+  let playerrolltext = document.getElementById('playerrolltext');
+  let AIrrolltext = document.getElementById('AIrrolltext');
+  let resultatet = document.getElementById('result');
+
+  let playerroll;
+  let AIroll;
+
+  knapp.addEventListener('click', function() {
+    getrandomnumberforplayer();
+    getrandomnumberforAI();
+    showPlayerrollResult();
+    showAIrollresult();
+    visaresultat();
+  });
+
+  function getrandomnumberforplayer() {
+    playerroll = Math.floor(Math.random() * 6) + 1;
+    console.log(playerroll);
+  }
+
+  function showPlayerrollResult() {
+    playerrolltext.innerHTML = playerroll;
+  }
+
+  function getrandomnumberforAI() {
+    AIroll = Math.floor(Math.random() * 6) + 1;
+    console.log(AIroll);
+  }
+
+  function showAIrollresult() {
+    AIrrolltext.innerHTML = AIroll;
+  }
+
+  function räknavinnare() {
+    if (playerroll > AIroll) {
+      return "Spelare Vinner!";
+    }
+    else if (AIroll > playerroll) {
+      return "AI Vinner!";
+    }
+    else {
+      return "Det är lika!";
+    }
+  }
+
+  function visaresultat() {
+    resultatet.innerHTML = räknavinnare(); {
+    }
+  }
+
+</script>
+
+<script src="js/app.js"></script>
+</body>
+
+</html>
+
+
