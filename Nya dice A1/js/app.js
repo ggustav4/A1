@@ -10,52 +10,74 @@
 // AFTER THAT WE WANT TO VIEW AND GET A EVALUATION, THEN SHOW THE EVALUATION
 // ADD AND SHOW TOTAL SCORE, SO A AI SCORE, INCRESSE AI SCORE WHEN AI WINS, INCRESSE PLAYER SCORE WHEN PLAYER WINS
 
-let knapp = document.getElementById('button0');
-let playerrolltext = document.getElementById('playerrolltext');
-let AIrrolltext = document.getElementById('AIrrolltext');
-let resultatet = document.getElementById('result');
+const playerRollText = document.getElementById("playerRollText");
+const aiRollText = document.getElementById("aiRollText");
+const resultatText = document.getElementById("resultatText");
+const playerScoreText = document.getElementById("playerScoreText");
+const aiScoreText = document.getElementById("aiScoreText");
+const scoreBoardDrawText = document.getElementById("scoreBoardDraw");
+const button0 = document.getElementById("button0");
 
-let playerroll;
-let AIroll;
 
-knapp.addEventListener('click', function() {
-  getrandomnumberforplayer();
-  getrandomnumberforAI();
-  showPlayerrollResult();
-  showAIrollresult();
-  visaresultat();
+let playerRoll = 0;
+let aiRoll= 0;
+let playerScore = 0;
+let aiScore = 0;
+let scoreBoardDraw = 0;
+
+
+button0.addEventListener( "click", () => {
+  getRandomNumberPlayer();
+  showRandomNumberPlayer();
+  getRandomNumberAi();
+  showRandomNumberAi();
+  showResult();
+  showScoreBoard();
+
+
+
 });
 
-function getrandomnumberforplayer() {
-  playerroll = Math.floor(Math.random() * 6) + 1;
-  console.log(playerroll);
+function getRandomNumberPlayer() {
+  playerRoll = Math.floor(Math.random() * 6 ) +1;
+}
+function showRandomNumberPlayer() {
+  playerRollText.innerHTML = "player Score" + playerRoll;
+}
+function getRandomNumberAi() {
+  aiRoll = Math.floor(Math.random() * 6) +1;
 }
 
-function showPlayerrollResult() {
-  playerrolltext.innerHTML = playerroll;
+function showRandomNumberAi() {
+  aiRollText.innerHTML = "ai Score" +aiRoll;
 }
 
-function getrandomnumberforAI() {
-  AIroll = Math.floor(Math.random() * 6) + 1;
-  console.log(AIroll);
-}
-
-function showAIrollresult() {
-  AIrrolltext.innerHTML = AIroll;
-}
-
-function räknavinnare() {
-  if (playerroll > AIroll) {
-    return "Spelare Vinner!";
+function showResult() {
+  if (playerRoll>aiRoll) {
+    playerScore++;
+    resultatText.innerHTML = " player Win";
   }
-  else if (AIroll > playerroll) {
-    return "AI Vinner!";
+  else if (aiRoll>playerRoll){
+    aiScore++;
+  resultatText.innerHTML = " ai Win";
+}
+  else { scoreBoardDraw++;
+  resultatText.innerHTML = "Draw";
+}
+  }
+
+function showScoreBoard() {
+  if (playerRoll > aiRoll) {
+    playerScoreText.innerHTML = " player Score" + playerScore;
+  }
+  else if (playerScore < aiRoll) {
+    aiScoreText.innerHTML = " ai Score" + aiScore;
   }
   else {
-    return "Det är lika!";
+    scoreBoardDrawText.innerHTML = " draw" + scoreBoardDraw;
   }
 }
 
-function visaresultat() {
-  resultatet.innerHTML = räknavinnare();
-}
+
+
+
