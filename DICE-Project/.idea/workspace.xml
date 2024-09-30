@@ -5,29 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f06b5c0-cb1a-4401-af41-4d98242d01d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DICE-Project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/vendor/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.common.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Nya dice A1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Nya dice A1/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Nya dice A1/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Nya dice A1/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +59,7 @@
       <updated>1726748628889</updated>
       <workItem from="1726748630695" duration="6732000" />
       <workItem from="1726755464294" duration="152000" />
-      <workItem from="1727679832289" duration="1200000" />
+      <workItem from="1727679832289" duration="1250000" />
     </task>
     <servers />
   </component>

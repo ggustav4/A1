@@ -39,42 +39,42 @@ button0.addEventListener( "click", () => {
 });
 
 function getRandomNumberPlayer() {
-  playerRoll = Math.floor(Math.random() * 6 ) +1;
+  playerRoll = Math.floor(Math.random() * 6 ) +1 ;
 }
 function showRandomNumberPlayer() {
-  playerRollText.innerHTML = "player Score" + playerRoll;
+  playerRollText.innerHTML = " player Score " + playerRoll;
 }
 function getRandomNumberAi() {
-  aiRoll = Math.floor(Math.random() * 6) +1;
+  aiRoll = Math.floor(Math.random() * 6) + 1 ;
 }
 
 function showRandomNumberAi() {
-  aiRollText.innerHTML = "ai Score" +aiRoll;
+  aiRollText.innerHTML = " ai Score " + aiRoll;
 }
 
 function showResult() {
   if (playerRoll>aiRoll) {
-    playerScore++;
-    resultatText.innerHTML = " player Win";
+    playerScore ++;
+    resultatText.innerHTML = " player Win ";
   }
   else if (aiRoll>playerRoll){
-    aiScore++;
-  resultatText.innerHTML = " ai Win";
+    aiScore ++;
+  resultatText.innerHTML = " ai Win ";
 }
-  else { scoreBoardDraw++;
-  resultatText.innerHTML = "Draw";
+  else { scoreBoardDraw ++;
+  resultatText.innerHTML = " Draw ";
 }
   }
 
 function showScoreBoard() {
   if (playerRoll > aiRoll) {
-    playerScoreText.innerHTML = " player Score" + playerScore;
+    playerScoreText.innerHTML = " player Score " + playerScore;
   }
   else if (playerScore < aiRoll) {
-    aiScoreText.innerHTML = " ai Score" + aiScore;
+    aiScoreText.innerHTML = " ai Score " + aiScore;
   }
   else {
-    scoreBoardDrawText.innerHTML = " draw" + scoreBoardDraw;
+    scoreBoardDrawText.innerHTML = " draw " + scoreBoardDraw;
   }
 }
 
