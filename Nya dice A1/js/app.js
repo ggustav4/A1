@@ -18,22 +18,20 @@ const aiScoreText = document.getElementById("aiScoreText");
 const scoreBoardDrawText = document.getElementById("scoreBoardDraw");
 const button0 = document.getElementById("button0");
 
-
+let aiScore = 0;
+let scoreBoardDraw = 0;
 let playerRoll = 0;
 let aiRoll= 0;
 let playerScore = 0;
-let aiScore = 0;
-let scoreBoardDraw = 0;
 
 
 button0.addEventListener( "click", () => {
   getRandomNumberPlayer();
+  showScoreBoard();
   showRandomNumberPlayer();
   getRandomNumberAi();
   showRandomNumberAi();
   showResult();
-  showScoreBoard();
-
 
 
 });
@@ -42,14 +40,14 @@ function getRandomNumberPlayer() {
   playerRoll = Math.floor(Math.random() * 6 ) +1 ;
 }
 function showRandomNumberPlayer() {
-  playerRollText.innerHTML = " Spelarens Poäng " + playerRoll;
+  playerRollText.innerHTML = " Spelarens kast = " + playerRoll;
 }
 function getRandomNumberAi() {
   aiRoll = Math.floor(Math.random() * 6) + 1 ;
 }
 
 function showRandomNumberAi() {
-  aiRollText.innerHTML = " AI Poäng " + aiRoll;
+  aiRollText.innerHTML = " AI kast = " + aiRoll;
 }
 
 function showResult() {
@@ -62,7 +60,7 @@ function showResult() {
   resultatText.innerHTML = " AI Vinner ";
 }
   else { scoreBoardDraw ++;
-  resultatText.innerHTML = " Draw ";
+  resultatText.innerHTML = " Lika ";
 }
   }
 
