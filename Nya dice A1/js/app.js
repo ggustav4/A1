@@ -17,6 +17,7 @@ const playerScoreText = document.getElementById("playerScoreText");
 const aiScoreText = document.getElementById("aiScoreText");
 const scoreBoardDrawText = document.getElementById("scoreBoardDraw");
 const button0 = document.getElementById("button0");
+button0.style.color = "blue";
 
 let aiScore = 0;
 let scoreBoardDraw = 0;
