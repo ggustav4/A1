@@ -42,24 +42,24 @@ function getRandomNumberPlayer() {
   playerRoll = Math.floor(Math.random() * 6 ) +1 ;
 }
 function showRandomNumberPlayer() {
-  playerRollText.innerHTML = " player Score " + playerRoll;
+  playerRollText.innerHTML = " Spelarens Poäng " + playerRoll;
 }
 function getRandomNumberAi() {
   aiRoll = Math.floor(Math.random() * 6) + 1 ;
 }
 
 function showRandomNumberAi() {
-  aiRollText.innerHTML = " ai Score " + aiRoll;
+  aiRollText.innerHTML = " AI Poäng " + aiRoll;
 }
 
 function showResult() {
   if (playerRoll>aiRoll) {
     playerScore ++;
-    resultatText.innerHTML = " player Win ";
+    resultatText.innerHTML = " Spelare Vinner ";
   }
   else if (aiRoll>playerRoll){
     aiScore ++;
-  resultatText.innerHTML = " ai Win ";
+  resultatText.innerHTML = " AI Vinner ";
 }
   else { scoreBoardDraw ++;
   resultatText.innerHTML = " Draw ";
